@@ -1,8 +1,7 @@
 ---
-title: "Home"
+title: "Utkarsh Pandya"
 ---
 
-# Utkarsh Pandya
-## Business Intelligence & Data Analytics Professional
+# Business Intelligence & Data Analytics Professional
 
-Welcome to my portfolio website!
+Welcome to my portfolio!
