@@ -4,12 +4,22 @@ search: false
 ---
 
 ---
-# Main CSS is now loaded dynamically via JavaScript
 ---
 
-@charset "utf-8";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'air' }}";
+@import "minimal-mistakes";
 
-/* Placeholder - skins loaded dynamically */
-body {
-  /* Empty rule to satisfy SCSS parser */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
