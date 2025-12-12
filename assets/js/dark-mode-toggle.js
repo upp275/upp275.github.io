@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   applySkin(savedTheme);
   
   toggleBtn.addEventListener('click', function() {
-    const currentSkin = getCurrentSkin();
+    const currentSkin = localStorage.getItem('theme') || 'air';
     const newSkin = currentSkin === 'dark' ? 'air' : 'dark';
     
     applySkin(newSkin);
@@ -14,17 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   function applySkin(skin) {
-    const mainCSS = document.querySelector('link[href*="main.css"]');
-    if (mainCSS) {
-      mainCSS.href = mainCSS.href.replace(/\/skins\/\w+/, `/skins/${skin}`);
+    const existingLink = document.getElementById('theme-css');
+    if (existingLink) {
+      existingLink.remove();
     }
     
+    const link = document.createElement('link');
+    link.id = 'theme-css';
+    link.rel = 'stylesheet';
+    link.href = `/assets/css/skins/${skin}.css`;
+    document.head.appendChild(link);
+    
     toggleBtn.textContent = skin === 'dark' ? '☀️' : '🌙';
-  }
-  
-  function getCurrentSkin() {
-    const mainCSS = document.querySelector('link[href*="main.css"]');
-    const match = mainCSS ? mainCSS.href.match(/\/skins\/(\w+)/) : null;
-    return match ? match[1] : 'air';
   }
 });
