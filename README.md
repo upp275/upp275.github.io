@@ -1,6 +1,6 @@
-# Utkarsh Patel - Portfolio Website
+# Utkarsh Pandya - Portfolio Website
 
-A modern, responsive portfolio website built with React and deployed on GitHub Pages.
+A modern, responsive portfolio website for Business Intelligence & Data Analytics Professional built with React and deployed on GitHub Pages.
 
 ## 🌟 Features
 
@@ -15,7 +15,7 @@ A modern, responsive portfolio website built with React and deployed on GitHub P
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://utkarsh.github.io/portfolio](https://utkarsh.github.io/portfolio)
+Visit the live portfolio: [https://upp275.github.io/portfolio](https://upp275.github.io/portfolio)
 
 ## 🛠️ Built With
 
