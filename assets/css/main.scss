@@ -84,13 +84,15 @@ search: false
 }
 
 /* Remove scrollbars */
-body {
+html, body {
   overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
 }
 
 .sidebar {
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 
