@@ -42,6 +42,31 @@ search: false
   color: #eaeaea !important;
 }
 
+/* Fix author profile layout */
+.author__urls-wrapper {
+  overflow: hidden;
+}
+
+.author__urls {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.author__urls li {
+  font-size: 0.8em;
+  line-height: 1.2;
+}
+
+/* Remove scrollbars */
+body {
+  overflow-x: hidden;
+}
+
+.sidebar {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 
 /* Static sidebar navigation */
 .sidebar {
