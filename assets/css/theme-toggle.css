@@ -1,0 +1,104 @@
+/* Theme Toggle Styles - Light and Dark Mode */
+
+/* Light theme (default) */
+:root {
+  --bg-color: #eeeeee;
+  --text-color: #222831;
+  --muted-text-color: #393e46;
+  --primary-color: #0092ca;
+  --border-color: #d4d4d4;
+  --footer-bg: #0092ca;
+  --link-color: #393e46;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #252a34;
+  --text-color: #eaeaea;
+  --muted-text-color: #b0b0b0;
+  --primary-color: #00adb5;
+  --border-color: #3d4450;
+  --footer-bg: #1a1f28;
+  --link-color: #4db6ac;
+}
+
+/* Apply theme colors */
+[data-theme="dark"] body {
+  background-color: #252a34 !important;
+  color: #eaeaea !important;
+}
+
+[data-theme="dark"] .masthead {
+  background-color: #252a34 !important;
+  border-bottom-color: #3d4450 !important;
+}
+
+[data-theme="dark"] .page__footer {
+  background-color: #1a1f28 !important;
+  color: #eaeaea !important;
+}
+
+[data-theme="dark"] a {
+  color: #4db6ac !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #eaeaea !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] li {
+  color: #eaeaea !important;
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: #1a1f28 !important;
+  color: #eaeaea !important;
+}
+
+[data-theme="dark"] .site-title {
+  color: #eaeaea !important;
+}
+
+[data-theme="dark"] .greedy-nav a {
+  color: #eaeaea !important;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth transitions */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.masthead {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.page__footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

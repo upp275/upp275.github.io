@@ -1,20 +1,25 @@
+// Apply saved theme immediately on script load (before DOM ready)
+(function() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+
+// Initialize toggle button on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
   const toggleBtn = document.getElementById('dark-mode-toggle');
   if (!toggleBtn) return;
   
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  applyTheme(savedTheme);
+  // Set initial button text
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  toggleBtn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
   
+  // Add click handler
   toggleBtn.addEventListener('click', function() {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
     
-    applyTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+    toggleBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
   });
-  
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
-  }
 });
