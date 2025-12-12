@@ -12,10 +12,9 @@ minimal_mistakes_skin: "default"
 # Site Author
 author:
   name: "Utkarsh Pandya"
-  avatar: "/assets/images/placeholder.svg"
+  avatar: "/assets/images/profile-photo.jpg"
   bio: "Data Analytics & Business Process Improvement Specialist"
-  location: "Your Location"
-  email: "your.email@example.com"
+  location: "Ahmedabad, Gujarat, India | Sydney, Perth Australia (previous) - can travel freely"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
