@@ -75,6 +75,10 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+# Custom JavaScript
+footer_scripts:
+  - "/assets/js/navigation.js"
+
 # Archives
 category_archive:
   type: liquid

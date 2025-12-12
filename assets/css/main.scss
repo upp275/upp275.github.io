@@ -27,6 +27,49 @@ search: false
 .author__urls {
   display: block !important;
 }
+
+/* Animated expandable navigation */
+.nav__list .nav__items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.nav__list .nav__items.active {
+  max-height: 500px;
+}
+
+.nav__list .nav__title {
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+.nav__list .nav__title:after {
+  content: '▼';
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+.nav__list .nav__title.expanded:after {
+  transform: rotate(180deg);
+}
+
+.nav__list .nav__items .nav__item {
+  padding-left: 20px;
+  border-left: 2px solid #34495e;
+  margin-left: 10px;
+}
+
+.nav__list .nav__items .nav__item a {
+  color: #bdc3c7;
+  font-size: 0.9em;
+}
+
+.nav__list .nav__items .nav__item a:hover {
+  color: #3498db;
+}
 /* Static sidebar navigation */
 .sidebar {
   position: sticky !important;
