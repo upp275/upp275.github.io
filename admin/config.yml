@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: upp275/upp275.github.io
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "single"}
+          - {label: "Author Profile", name: "author_profile", widget: "hidden", default: false}
+          - {label: "Page Title", name: "title", widget: "string", required: false}
+          - {label: "Excerpt", name: "excerpt", widget: "text"}
+          - label: "Intro Section"
+            name: "intro"
+            widget: "list"
+            fields:
+              - {label: "Content", name: "excerpt", widget: "text"}
+          - label: "Feature Sections"
+            name: "feature_row"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "excerpt", widget: "text"}
+              - {label: "Page Link", name: "url", widget: "string"}
+              - {label: "Button Text", name: "btn_label", widget: "string", default: "Learn More"}
+              - {label: "Button Style", name: "btn_class", widget: "select", options: ["btn--primary", "btn--success", "btn--warning", "btn--danger", "btn--info"]}
+
+  - name: "portfolio_pages"
+    label: "Portfolio Pages"
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "select", options: ["single", "splash"], default: "single"}
+      - {label: "Author Profile", name: "author_profile", widget: "boolean", default: false}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - label: "Header Image"
+        name: "header"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Image", name: "image", widget: "image", required: false}
+          - {label: "Caption", name: "caption", widget: "string", required: false}
+
+  - name: "config"
+    label: "Site Settings"
+    files:
+      - label: "Site Configuration"
+        name: "config"
+        file: "_config.yml"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Site Name", name: "name", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Site URL", name: "url", widget: "string"}
+          - {label: "Theme Skin", name: "minimal_mistakes_skin", widget: "select", options: ["default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"]}
+          - label: "Author Info"
+            name: "author"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Profile Photo", name: "avatar", widget: "image"}
+              - {label: "Bio", name: "bio", widget: "text"}
+              - {label: "Location", name: "location", widget: "string"}
