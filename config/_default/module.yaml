@@ -1,8 +1,5 @@
 ############################
-## HUGO MODULES
-## Install or uninstall themes and plugins here.
-## Docs: https://gohugo.io/hugo-modules/
+## THEMES
 ############################
 
-imports:
-  - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5
+# No modules - using basic Hugo
