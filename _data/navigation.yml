@@ -1,0 +1,15 @@
+main:
+  - title: "About"
+    url: /about/
+  - title: "Portfolio"
+    url: /portfolio/
+  - title: "Data Analytics"
+    url: /data-analytics/
+  - title: "Project Management"
+    url: /project-management/
+  - title: "Process Improvement"
+    url: /process-improvement/
+  - title: "Blog"
+    url: /blog/
+  - title: "Contact"
+    url: /contact/
