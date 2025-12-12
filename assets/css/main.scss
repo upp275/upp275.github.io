@@ -6,6 +6,19 @@ search: false
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 
+/* Hide original masthead elements */
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav,
+.site-title,
+.site-logo,
+.visible-links,
+.hidden-links,
+.search__toggle,
+.greedy-nav__toggle {
+  display: none !important;
+}
+
 /* Custom header design */
 .masthead {
   display: block !important;
