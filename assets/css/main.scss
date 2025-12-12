@@ -9,8 +9,45 @@ search: false
 /* Show masthead for top navigation */
 .masthead {
   display: block !important;
-  background: #252a34;
-  padding: 1em 0;
+  background: #252a34 !important;
+  padding: 1em 0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+}
+
+.masthead__inner-wrap {
+  max-width: none !important;
+  padding: 0 20px !important;
+}
+
+.masthead__menu {
+  width: 100% !important;
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+.greedy-nav .visible-links {
+  display: flex !important;
+  gap: 2em;
+}
+
+.greedy-nav .visible-links a {
+  color: #eaeaea !important;
+  text-decoration: none;
+}
+
+.greedy-nav .visible-links a:hover {
+  color: #3498db !important;
+}
+
+.site-title {
+  color: #eaeaea !important;
+  font-weight: bold;
+  margin-right: 2em;
 }
 
 /* Adjust main content spacing */
