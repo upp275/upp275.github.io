@@ -1,9 +1,0 @@
-{
-  "security.workspace.trust.enabled": true,
-  "security.workspace.trust.startupPrompt": "never",
-  "security.workspace.trust.untrustedFiles": "open",
-  "task.allowAutomaticTasks": "on",
-  "code-runner.runInTerminal": true,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.saveFileBeforeRun": true
-}
