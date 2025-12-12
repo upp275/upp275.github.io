@@ -1,0 +1,4 @@
+name = "Basic"
+license = "MIT"
+description = "A basic Hugo theme"
+min_version = "0.41.0"

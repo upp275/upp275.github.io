@@ -5,6 +5,7 @@
 
 title: Utkarsh Pandya - Business Intelligence Portfolio # Website name
 baseURL: 'https://upp275.github.io/portfolio/' # Website URL
+theme: basic
 
 ############################
 ## PAGE OPTIONS
