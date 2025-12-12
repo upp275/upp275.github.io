@@ -6,8 +6,7 @@ url: "https://upp275.github.io"
 baseurl: ""
 repository: "upp275/upp275.github.io"
 
-# Theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# Theme (Local)
 minimal_mistakes_skin: "default"
 
 # Site Author
