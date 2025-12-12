@@ -83,14 +83,14 @@ search: false
   padding: 0 10px !important;
 }
 
-/* Remove horizontal scrollbar only */
-html, body {
-  overflow-x: hidden;
+/* Remove scrollbars */
+body {
+  overflow-x: auto;
 }
 
 .sidebar {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 
@@ -99,6 +99,7 @@ html, body {
   position: sticky !important;
   top: 2em;
   height: calc(100vh - 4em);
+  overflow-y: auto;
 }
 
 .sidebar .nav__list {
