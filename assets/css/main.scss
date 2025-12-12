@@ -15,6 +15,18 @@ search: false
 #main {
   margin-top: 0 !important;
 }
+
+/* Ensure sidebar is always visible */
+.sidebar {
+  display: block !important;
+}
+
+/* Ensure author profile is visible */
+.author__avatar,
+.author__content,
+.author__urls {
+  display: block !important;
+}
 /* Static sidebar navigation */
 .sidebar {
   position: sticky !important;
