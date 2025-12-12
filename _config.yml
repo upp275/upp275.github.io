@@ -7,7 +7,7 @@ baseurl: ""
 repository: "upp275/upp275.github.io"
 
 # Theme (using local files)
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "dark"
 
 # Additional skins for dynamic switching
 skins:
