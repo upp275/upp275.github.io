@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: Experienced professional with 15+ years background in Business Intelligence, Data Analytics, Business Process Improvement, Software Project Management, and Business Operations Management.
+bio: **UPDATED** - Experienced professional with 15+ years background in Business Intelligence, Data Analytics, Business Process Improvement, Software Project Management, and Business Operations Management.
 
 interests:
 - Business Intelligence
