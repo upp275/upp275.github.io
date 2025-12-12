@@ -6,7 +6,8 @@ url: "https://upp275.github.io"
 baseurl: ""
 repository: "upp275/upp275.github.io"
 
-# Theme (Local)
+# Theme
+theme: jekyll-theme-minimal-mistakes-jekyll
 minimal_mistakes_skin: "air"
 
 # Additional skins for dynamic switching
