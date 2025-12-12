@@ -21,6 +21,9 @@
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
 
+<!-- Dark mode toggle script -->
+<script src="{{ '/assets/js/dark-mode-toggle.js' | relative_url }}"></script>
+
 {% if site.after_footer_scripts %}
   {% for script in site.after_footer_scripts %}
     <script src="{{ script | relative_url }}"></script>
