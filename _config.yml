@@ -3,8 +3,8 @@ title: "Utkarsh Pandya"
 name: "Utkarsh Pandya"
 description: "Data Analytics | Business Analyst | Project Manager | Supply Chain & Process Improvement Specialist"
 url: "https://upp275.github.io"
-baseurl: "/portfolio"
-repository: "upp275/portfolio"
+baseurl: ""
+repository: "upp275/upp275.github.io"
 
 # Theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
