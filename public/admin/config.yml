@@ -1,0 +1,124 @@
+backend:
+  name: github
+  repo: upp275/portfolio
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "personal"
+    label: "Personal Info"
+    files:
+      - label: "Personal Information"
+        name: "personal-info"
+        file: "src/data/personalInfo.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Location", name: "location", widget: "string"}
+          - {label: "LinkedIn", name: "linkedin", widget: "string"}
+          - {label: "GitHub", name: "github", widget: "string"}
+          - {label: "Website", name: "website", widget: "string"}
+          - {label: "Summary", name: "summary", widget: "text"}
+          - {label: "Avatar", name: "avatar", widget: "image"}
+          - {label: "Resume URL", name: "resumeUrl", widget: "string"}
+
+  - name: "skills"
+    label: "Skills"
+    files:
+      - label: "Skills Data"
+        name: "skills-data"
+        file: "src/data/skills.json"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "Category Name", name: "name", widget: "string"}
+              - label: "Skills"
+                name: "skills"
+                widget: "list"
+                fields:
+                  - {label: "Skill Name", name: "name", widget: "string"}
+                  - {label: "Level (0-100)", name: "level", widget: "number", min: 0, max: 100}
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - label: "Projects Data"
+        name: "projects-data"
+        file: "src/data/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Technologies"
+                name: "technologies"
+                widget: "list"
+                field: {label: "Technology", name: "tech", widget: "string"}
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "GitHub URL", name: "githubUrl", widget: "string", required: false}
+              - {label: "Live URL", name: "liveUrl", widget: "string", required: false}
+              - {label: "Featured", name: "featured", widget: "boolean", default: false}
+
+  - name: "experience"
+    label: "Experience"
+    files:
+      - label: "Experience Data"
+        name: "experience-data"
+        file: "src/data/experience.json"
+        fields:
+          - label: "Experience"
+            name: "experience"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Job Title", name: "title", widget: "string"}
+              - {label: "Company", name: "company", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Duration", name: "duration", widget: "string"}
+              - {label: "Type", name: "type", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Achievements"
+                name: "achievements"
+                widget: "list"
+                field: {label: "Achievement", name: "achievement", widget: "string"}
+              - label: "Technologies"
+                name: "technologies"
+                widget: "list"
+                field: {label: "Technology", name: "tech", widget: "string"}
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Degree", name: "degree", widget: "string"}
+              - {label: "School", name: "school", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Duration", name: "duration", widget: "string"}
+              - {label: "GPA", name: "gpa", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Achievements"
+                name: "achievements"
+                widget: "list"
+                field: {label: "Achievement", name: "achievement", widget: "string"}
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Issuer", name: "issuer", widget: "string"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Credential ID", name: "credentialId", widget: "string"}
+              - {label: "URL", name: "url", widget: "string", required: false}
