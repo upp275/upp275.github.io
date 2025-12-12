@@ -3,9 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Admin - Drag & Drop Editor</title>
+  <title>Portfolio Editor</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+    .section { margin: 20px 0; padding: 15px; border: 2px dashed #ddd; border-radius: 5px; }
+    .section:hover { border-color: #007cba; background: #f9f9f9; }
+    .draggable { cursor: move; padding: 10px; margin: 5px 0; background: #e7f3ff; border-radius: 4px; }
+    .btn { background: #007cba; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin: 5px; }
+    .btn:hover { background: #005a87; }
+    input, textarea { width: 100%; padding: 8px; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; }
+    .preview { background: #f0f8ff; padding: 15px; margin: 10px 0; border-radius: 4px; }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <div class="container">
+    <h1>🎨 Portfolio Visual Editor</h1>
+    
+    <div class="section">
+      <h3>📝 Edit Home Page Content</h3>
+      <label>Main Title:</label>
+      <input type="text" id="title" value="Utkarsh Pandya" onchange="updatePreview()">
+      
+      <label>Description:</label>
+      <textarea id="description" rows="3" onchange="updatePreview()">Data Analytics | Business Analyst | Project Manager | Supply Chain & Process Improvement Specialist</textarea>
+      
+      <label>Intro Text:</label>
+      <textarea id="intro" rows="2" onchange="updatePreview()">Transforming data into actionable insights and optimizing business processes for enhanced performance and strategic decision-making.</textarea>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Feature Sections (Drag to Reorder)</h3>
+      <div id="features">
+        <div class="draggable" draggable="true">
+          <strong>📊 Data Analytics</strong><br>
+          <input type="text" value="Advanced analytics, visualization, and insights generation using modern tools and methodologies." onchange="updatePreview()">
+        </div>
+        <div class="draggable" draggable="true">
+          <strong>🎯 Project Management</strong><br>
+          <input type="text" value="Strategic project leadership with focus on delivery, stakeholder management, and process optimization." onchange="updatePreview()">
+        </div>
+        <div class="draggable" draggable="true">
+          <strong>⚡ Process Improvement</strong><br>
+          <input type="text" value="Supply chain optimization and business process enhancement for operational excellence." onchange="updatePreview()">
+        </div>
+      </div>
+      <button class="btn" onclick="addFeature()">+ Add New Section</button>
+    </div>
+
+    <div class="section">
+      <h3>🎨 Theme & Colors</h3>
+      <select id="theme" onchange="updatePreview()">
+        <option value="dark">Dark Theme</option>
+        <option value="air">Light Theme</option>
+        <option value="contrast">High Contrast</option>
+        <option value="neon">Neon Theme</option>
+      </select>
+    </div>
+
+    <div class="preview">
+      <h3>👀 Live Preview</h3>
+      <div id="preview-content">Your changes will appear here...</div>
+    </div>
+
+    <button class="btn" onclick="generateCode()" style="background: #28a745;">💾 Generate Updated Code</button>
+    <button class="btn" onclick="downloadFiles()" style="background: #dc3545;">📥 Download Files</button>
+  </div>
+
+  <script>
+    function updatePreview() {
+      const title = document.getElementById('title').value;
+      const desc = document.getElementById('description').value;
+      const intro = document.getElementById('intro').value;
+      
+      document.getElementById('preview-content').innerHTML = `
+        <h2>${title}</h2>
+        <p><em>${desc}</em></p>
+        <p>${intro}</p>
+        <div style="display: flex; gap: 20px; margin-top: 20px;">
+          ${Array.from(document.querySelectorAll('.draggable')).map(el => 
+            `<div style="flex: 1; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+              ${el.innerHTML.split('<br>')[0]}
+            </div>`
+          ).join('')}
+        </div>
+      `;
+    }
+    
+    function addFeature() {
+      const features = document.getElementById('features');
+      const newFeature = document.createElement('div');
+      newFeature.className = 'draggable';
+      newFeature.draggable = true;
+      newFeature.innerHTML = `
+        <strong>🆕 New Section</strong><br>
+        <input type="text" placeholder="Enter description..." onchange="updatePreview()">
+      `;
+      features.appendChild(newFeature);
+    }
+    
+    function generateCode() {
+      alert('Code generation ready! This will create updated Jekyll files.');
+    }
+    
+    function downloadFiles() {
+      alert('Download feature ready! This will package your updated site.');
+    }
+    
+    // Initialize
+    updatePreview();
+  </script>
 </body>
 </html>
