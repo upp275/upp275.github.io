@@ -3,15 +3,25 @@ main:
     url: /about/
   - title: "Portfolio"
     url: /portfolio/
-  - title: "Data Analytics"
-    url: /data-analytics/
-  - title: "Project Management"
-    url: /project-management/
-  - title: "Process Improvement"
-    url: /process-improvement/
-  - title: "Financial Market"
-    url: /financial-market/
+    children:
+      - title: "Data Analytics"
+        url: /data-analytics/
+      - title: "Project Management"
+        url: /project-management/
+      - title: "Business Analyst"
+        url: /business-analyst/
+      - title: "Process Improvement"
+        url: /process-improvement/
   - title: "Projects"
     url: /Projects/
+    children:
+      - title: "Financial Market Projects"
+        url: /financial-market-projects/
+      - title: "BA Projects"
+        url: /ba-projects/
+      - title: "Data Science Projects"
+        url: /data-science-projects/
+  - title: "Financial Market"
+    url: /financial-market/
   - title: "Contact"
     url: /contact/
