@@ -89,7 +89,7 @@ body {
 }
 
 .sidebar {
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
 }
 
@@ -132,7 +132,7 @@ body {
 }
 
 /* Wider sidebar and proper content alignment */
-@media (min-width: 64em) {
+@media (min-width: 75em) {
   .sidebar {
     width: 350px !important;
     margin: 0 !important;
