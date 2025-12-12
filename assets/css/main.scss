@@ -57,6 +57,32 @@ search: false
   line-height: 1.2;
 }
 
+/* Fill empty space in author profile */
+.author__avatar {
+  width: 100% !important;
+  text-align: center;
+}
+
+.author__avatar img {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.author__content {
+  width: 100% !important;
+  text-align: center;
+  margin: 0 !important;
+}
+
+.author__urls-wrapper {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.sidebar {
+  padding: 0 10px !important;
+}
+
 /* Remove scrollbars */
 body {
   overflow-x: hidden;
