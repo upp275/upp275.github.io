@@ -5,3 +5,23 @@ search: false
 
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
+/* Static sidebar navigation */
+.sidebar {
+  position: sticky !important;
+  top: 2em;
+  height: calc(100vh - 4em);
+  overflow-y: auto;
+}
+
+.sidebar .nav__list {
+  position: sticky;
+  top: 0;
+}
+
+/* Ensure sidebar is always visible */
+@media (min-width: 64em) {
+  .sidebar {
+    width: 200px;
+    margin-right: 1em;
+  }
+}
