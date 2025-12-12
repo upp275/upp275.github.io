@@ -2,29 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleBtn = document.getElementById('dark-mode-toggle');
   if (!toggleBtn) return;
   
-  const savedTheme = localStorage.getItem('theme') || 'air';
-  applySkin(savedTheme);
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
   
   toggleBtn.addEventListener('click', function() {
-    const currentSkin = localStorage.getItem('theme') || 'air';
-    const newSkin = currentSkin === 'dark' ? 'air' : 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
-    applySkin(newSkin);
-    localStorage.setItem('theme', newSkin);
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   });
   
-  function applySkin(skin) {
-    const existingLink = document.getElementById('theme-css');
-    if (existingLink) {
-      existingLink.remove();
-    }
-    
-    const link = document.createElement('link');
-    link.id = 'theme-css';
-    link.rel = 'stylesheet';
-    link.href = `/assets/css/${skin}.css`;
-    document.head.appendChild(link);
-    
-    toggleBtn.textContent = skin === 'dark' ? '☀️' : '🌙';
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
   }
 });
