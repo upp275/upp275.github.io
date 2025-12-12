@@ -7,4 +7,9 @@ search: false
 # Main CSS is now loaded dynamically via JavaScript
 ---
 
+@charset "utf-8";
+
 /* Placeholder - skins loaded dynamically */
+body {
+  /* Empty rule to satisfy SCSS parser */
+}
