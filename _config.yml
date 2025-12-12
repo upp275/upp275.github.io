@@ -7,7 +7,7 @@ baseurl: ""
 repository: "upp275/upp275.github.io"
 
 # Theme (Local)
-minimal_mistakes_skin: "sunrise"
+minimal_mistakes_skin: "default"
 
 # Site Author
 author:
