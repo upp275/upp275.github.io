@@ -1,8 +1,10 @@
 ---
 title: "Portfolio"
-layout: splash
+layout: single
 permalink: /portfolio/
-classes: wide
+author_profile: true
+sidebar:
+  nav: "main"
 ---
 
 ## Featured Projects

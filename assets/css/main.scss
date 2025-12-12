@@ -5,6 +5,16 @@ search: false
 
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
+
+/* Hide duplicate masthead */
+.masthead {
+  display: none !important;
+}
+
+/* Adjust main content spacing */
+#main {
+  margin-top: 0 !important;
+}
 /* Static sidebar navigation */
 .sidebar {
   position: sticky !important;
