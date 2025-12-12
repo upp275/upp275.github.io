@@ -1,0 +1,48 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portfolio Resume Builder",
+      "description": "A modern, responsive resume builder application built with React. Features real-time preview, multiple templates, and PDF export functionality.",
+      "image": "/images/portfolio-builder.jpg",
+      "technologies": ["React", "JavaScript", "CSS", "HTML"],
+      "category": "Web Development",
+      "githubUrl": "https://github.com/utkarsh/portfolio-resume-builder",
+      "liveUrl": "https://utkarsh.github.io/portfolio-resume-builder",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "AI-Powered Task Manager",
+      "description": "Smart task management application with AI-driven priority suggestions and automated scheduling features.",
+      "image": "/images/task-manager.jpg",
+      "technologies": ["React", "Node.js", "MongoDB", "AI/ML"],
+      "category": "AI Integration",
+      "githubUrl": "https://github.com/utkarsh/ai-task-manager",
+      "liveUrl": "https://ai-task-manager.vercel.app",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "E-Commerce Platform",
+      "description": "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
+      "image": "/images/ecommerce.jpg",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "category": "Full Stack",
+      "githubUrl": "https://github.com/utkarsh/ecommerce-platform",
+      "liveUrl": "https://ecommerce-demo.netlify.app",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Weather Dashboard",
+      "description": "Interactive weather dashboard with real-time data, forecasts, and location-based services.",
+      "image": "/images/weather-dashboard.jpg",
+      "technologies": ["JavaScript", "API Integration", "Chart.js", "CSS"],
+      "category": "Web Development",
+      "githubUrl": "https://github.com/utkarsh/weather-dashboard",
+      "liveUrl": "https://weather-dashboard-demo.netlify.app",
+      "featured": false
+    }
+  ]
+}

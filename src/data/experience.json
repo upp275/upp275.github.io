@@ -1,0 +1,111 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "title": "Senior Software Developer",
+      "company": "Tech Solutions Inc.",
+      "location": "Remote",
+      "duration": "2022 - Present",
+      "type": "Full-time",
+      "description": "Lead development of scalable web applications using React and Node.js. Implemented AI-powered features that improved user engagement by 40%. Mentored junior developers and established coding best practices.",
+      "achievements": [
+        "Architected and developed 5+ full-stack applications",
+        "Reduced application load time by 60% through optimization",
+        "Led a team of 4 developers on critical projects",
+        "Implemented CI/CD pipelines reducing deployment time by 80%"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "AWS", "Docker"]
+    },
+    {
+      "id": 2,
+      "title": "Full Stack Developer",
+      "company": "Digital Innovations Ltd.",
+      "location": "New York, NY",
+      "duration": "2020 - 2022",
+      "type": "Full-time",
+      "description": "Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create responsive, user-friendly interfaces. Integrated third-party APIs and payment systems.",
+      "achievements": [
+        "Built 10+ responsive web applications",
+        "Integrated payment systems processing $1M+ annually",
+        "Improved code quality through comprehensive testing",
+        "Collaborated with cross-functional teams of 15+ members"
+      ],
+      "technologies": ["JavaScript", "React", "Express.js", "PostgreSQL", "Stripe"]
+    },
+    {
+      "id": 3,
+      "title": "Frontend Developer",
+      "company": "StartupXYZ",
+      "location": "San Francisco, CA",
+      "duration": "2019 - 2020",
+      "type": "Full-time",
+      "description": "Focused on creating engaging user interfaces for a fast-growing startup. Worked closely with UX designers to implement pixel-perfect designs. Optimized applications for performance and accessibility.",
+      "achievements": [
+        "Developed responsive UI components used across 3 products",
+        "Improved accessibility score to 95+ on all applications",
+        "Reduced bundle size by 40% through code optimization",
+        "Implemented design system used by entire development team"
+      ],
+      "technologies": ["React", "TypeScript", "Sass", "Webpack", "Jest"]
+    },
+    {
+      "id": 4,
+      "title": "Junior Web Developer",
+      "company": "WebCraft Agency",
+      "location": "Austin, TX",
+      "duration": "2018 - 2019",
+      "type": "Full-time",
+      "description": "Started career developing websites for small businesses and startups. Learned modern web development practices and gained experience with various frameworks and tools.",
+      "achievements": [
+        "Delivered 20+ client websites on time and within budget",
+        "Learned and implemented 5+ new technologies",
+        "Maintained 99% client satisfaction rate",
+        "Contributed to agency's 30% revenue growth"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript", "WordPress", "PHP"]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "University of Technology",
+      "location": "California, USA",
+      "duration": "2014 - 2018",
+      "gpa": "3.8/4.0",
+      "description": "Focused on software engineering, algorithms, and data structures. Completed capstone project on machine learning applications.",
+      "achievements": [
+        "Dean's List for 6 semesters",
+        "President of Computer Science Club",
+        "Winner of Annual Hackathon 2017",
+        "Published research paper on AI applications"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "2023",
+      "credentialId": "AWS-SAA-123456",
+      "url": "https://aws.amazon.com/certification/"
+    },
+    {
+      "id": 2,
+      "name": "React Developer Certification",
+      "issuer": "Meta",
+      "date": "2022",
+      "credentialId": "META-REACT-789012",
+      "url": "https://developers.facebook.com/certification/"
+    },
+    {
+      "id": 3,
+      "name": "Google Analytics Certified",
+      "issuer": "Google",
+      "date": "2022",
+      "credentialId": "GOOGLE-GA-345678",
+      "url": "https://skillshop.exceedlms.com/student/catalog"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "name": "Frontend Development",
+      "skills": [
+        { "name": "React", "level": 90 },
+        { "name": "JavaScript", "level": 95 },
+        { "name": "TypeScript", "level": 85 },
+        { "name": "HTML/CSS", "level": 90 },
+        { "name": "Tailwind CSS", "level": 80 }
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "skills": [
+        { "name": "Node.js", "level": 85 },
+        { "name": "Python", "level": 80 },
+        { "name": "Express.js", "level": 85 },
+        { "name": "REST APIs", "level": 90 },
+        { "name": "GraphQL", "level": 70 }
+      ]
+    },
+    {
+      "name": "Database & Cloud",
+      "skills": [
+        { "name": "MongoDB", "level": 80 },
+        { "name": "PostgreSQL", "level": 75 },
+        { "name": "AWS", "level": 70 },
+        { "name": "Docker", "level": 75 },
+        { "name": "Git", "level": 90 }
+      ]
+    },
+    {
+      "name": "AI & Tools",
+      "skills": [
+        { "name": "AI Integration", "level": 85 },
+        { "name": "Machine Learning", "level": 70 },
+        { "name": "VS Code", "level": 95 },
+        { "name": "Figma", "level": 75 },
+        { "name": "Agile/Scrum", "level": 80 }
+      ]
+    }
+  ]
+}
