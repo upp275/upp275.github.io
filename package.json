@@ -1,7 +1,7 @@
 {
   "name": "utkarsh-portfolio",
   "version": "1.0.0",
-  "description": "Utkarsh Patel - Professional Portfolio Website",
+  "description": "Utkarsh Pandya - Professional Portfolio Website",
   "homepage": "https://upp275.github.io/portfolio",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "deploy": "gh-pages -d build"
   },
   "keywords": ["portfolio", "react", "developer", "utkarsh", "patel", "software"],
-  "author": "Utkarsh Patel",
+  "author": "Utkarsh Pandya",
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",

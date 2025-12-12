@@ -1,6 +1,6 @@
 {
   "short_name": "Utkarsh Portfolio",
-  "name": "Utkarsh Patel - Software Developer Portfolio",
+  "name": "Utkarsh Pandya - Software Developer Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -12,5 +12,5 @@
   "display": "standalone",
   "theme_color": "#2c3e50",
   "background_color": "#ffffff",
-  "description": "Professional portfolio of Utkarsh Patel, Software Developer specializing in React, Node.js, and AI integration."
+  "description": "Professional portfolio of Utkarsh Pandya, Business Intelligence & Data Analytics Professional with 15+ years experience in BI, analytics, and project management."
 }

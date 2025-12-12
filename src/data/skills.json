@@ -1,43 +1,43 @@
 {
   "categories": [
     {
-      "name": "Frontend Development",
+      "name": "Data Analytics & BI",
       "skills": [
-        { "name": "React", "level": 90 },
-        { "name": "JavaScript", "level": 95 },
-        { "name": "TypeScript", "level": 85 },
-        { "name": "HTML/CSS", "level": 90 },
-        { "name": "Tailwind CSS", "level": 80 }
+        { "name": "Tableau", "level": 95 },
+        { "name": "Power BI", "level": 90 },
+        { "name": "SQL Server", "level": 90 },
+        { "name": "Power Query", "level": 85 },
+        { "name": "Excel VBA", "level": 90 }
       ]
     },
     {
-      "name": "Backend Development",
+      "name": "Enterprise Systems",
       "skills": [
-        { "name": "Node.js", "level": 85 },
-        { "name": "Python", "level": 80 },
-        { "name": "Express.js", "level": 85 },
-        { "name": "REST APIs", "level": 90 },
-        { "name": "GraphQL", "level": 70 }
+        { "name": "SAP S4 Hana", "level": 85 },
+        { "name": "SAP EWM", "level": 80 },
+        { "name": "SAP Analytics", "level": 85 },
+        { "name": "Microsoft Dynamics", "level": 75 },
+        { "name": "Power Platforms", "level": 80 }
       ]
     },
     {
-      "name": "Database & Cloud",
+      "name": "Project Management",
       "skills": [
-        { "name": "MongoDB", "level": 80 },
-        { "name": "PostgreSQL", "level": 75 },
-        { "name": "AWS", "level": 70 },
-        { "name": "Docker", "level": 75 },
-        { "name": "Git", "level": 90 }
+        { "name": "Microsoft Project", "level": 85 },
+        { "name": "Agile/Scrum", "level": 90 },
+        { "name": "Monday.com", "level": 80 },
+        { "name": "JIRA", "level": 75 },
+        { "name": "Business Analysis", "level": 95 }
       ]
     },
     {
-      "name": "AI & Tools",
+      "name": "Technical Skills",
       "skills": [
-        { "name": "AI Integration", "level": 85 },
-        { "name": "Machine Learning", "level": 70 },
-        { "name": "VS Code", "level": 95 },
-        { "name": "Figma", "level": 75 },
-        { "name": "Agile/Scrum", "level": 80 }
+        { "name": "SSAS/SSIS", "level": 80 },
+        { "name": "Data Warehousing", "level": 85 },
+        { "name": "KPI Development", "level": 95 },
+        { "name": "Process Optimization", "level": 90 },
+        { "name": "Supply Chain Analytics", "level": 85 }
       ]
     }
   ]
