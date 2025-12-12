@@ -131,8 +131,39 @@ body {
   margin: 0 !important;
 }
 
-/* Wider sidebar and proper content alignment */
-@media (min-width: 75em) {
+/* Mobile toggle menu */
+@media (max-width: 64em) {
+  .sidebar {
+    position: fixed !important;
+    left: -300px !important;
+    top: 0 !important;
+    width: 300px !important;
+    height: 100vh !important;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    background: #252a34;
+  }
+  
+  .sidebar.active {
+    left: 0 !important;
+  }
+  
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+/* Desktop sidebar */
+@media (min-width: 64em) {
   .sidebar {
     width: 350px !important;
     margin: 0 !important;
@@ -159,5 +190,9 @@ body {
   .page__inner-wrap {
     padding: 0 !important;
     margin: 0 !important;
+  }
+  
+  .toggle-btn {
+    display: none;
   }
 }
