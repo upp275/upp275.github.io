@@ -9,6 +9,11 @@ repository: "upp275/upp275.github.io"
 # Theme (Local)
 minimal_mistakes_skin: "air"
 
+# Additional skins for dynamic switching
+skins:
+  air: "air"
+  dark: "dark"
+
 # Site Author
 author:
   name: "Utkarsh Pandya"

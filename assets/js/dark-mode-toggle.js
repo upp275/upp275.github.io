@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const link = document.createElement('link');
     link.id = 'theme-css';
     link.rel = 'stylesheet';
-    link.href = `/assets/css/skins/${skin}.css`;
+    link.href = `/assets/css/${skin}.css`;
     document.head.appendChild(link);
     
     toggleBtn.textContent = skin === 'dark' ? '☀️' : '🌙';

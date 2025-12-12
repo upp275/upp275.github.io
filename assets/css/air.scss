@@ -1,9 +1,7 @@
 ---
 ---
 
-@charset "utf-8";
-
-@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes/skins/air";
 @import "minimal-mistakes";
 
 .dark-mode-toggle {
@@ -15,8 +13,8 @@
   margin-left: 0.5em;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-}
 
-.dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
