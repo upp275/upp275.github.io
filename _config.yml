@@ -114,12 +114,4 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
-      sidebar:
-        nav: "main"
-  # Global defaults
-  - scope:
-      path: ""
-    values:
-      sidebar:
-        nav: "main"
+      author_profile: false

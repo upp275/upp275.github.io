@@ -6,9 +6,11 @@ search: false
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 
-/* Hide duplicate masthead */
+/* Show masthead for top navigation */
 .masthead {
-  display: none !important;
+  display: block !important;
+  background: #252a34;
+  padding: 1em 0;
 }
 
 /* Adjust main content spacing */
@@ -16,9 +18,9 @@ search: false
   margin-top: 0 !important;
 }
 
-/* Ensure sidebar is always visible */
+/* Hide sidebar */
 .sidebar {
-  display: block !important;
+  display: none !important;
 }
 
 /* Ensure author profile is visible */
@@ -162,23 +164,12 @@ body {
   }
 }
 
-/* Desktop sidebar */
+/* Full width layout without sidebar */
 @media (min-width: 64em) {
-  .sidebar {
-    width: 350px !important;
-    margin: 0 !important;
-    padding: 30px !important;
-    position: fixed !important;
-    left: 0 !important;
-    top: 0 !important;
-    height: 100vh !important;
-    z-index: 10;
-  }
-  
   #main {
-    margin-left: 350px !important;
+    margin-left: 0 !important;
     padding: 20px !important;
-    width: calc(100% - 350px) !important;
+    width: 100% !important;
   }
   
   .page__content {
@@ -188,7 +179,7 @@ body {
   }
   
   .page__inner-wrap {
-    padding: 0 !important;
+    padding: 0 20px !important;
     margin: 0 !important;
   }
   
