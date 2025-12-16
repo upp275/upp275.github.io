@@ -135,19 +135,12 @@ search: false
   }
 }
 
-/* Animated gradient keyframes */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* Adjust body for fixed header */
 body {
   padding-top: 120px !important;
-  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e) !important;
-  background-size: 400% 400% !important;
-  animation: gradientShift 15s ease infinite !important;
+  background-color: #0a192f !important;
+  background-image: radial-gradient(rgba(100, 255, 218, 0.1) 1px, transparent 1px) !important;
+  background-size: 20px 20px !important;
   background-attachment: fixed !important;
   min-height: 100vh !important;
 }
