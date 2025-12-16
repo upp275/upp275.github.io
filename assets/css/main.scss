@@ -138,9 +138,14 @@ search: false
 /* Adjust body for fixed header */
 body {
   padding-top: 120px !important;
-  background-color: #0a192f !important;
-  background-image: radial-gradient(rgba(100, 255, 218, 0.1) 1px, transparent 1px) !important;
-  background-size: 20px 20px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,.02) 10px,
+    rgba(255,255,255,.02) 20px
+  ), linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   background-attachment: fixed !important;
   min-height: 100vh !important;
 }
