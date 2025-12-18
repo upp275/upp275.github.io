@@ -12,8 +12,7 @@ main:
         url: /business-analyst/
       - title: "Process Improvement"
         url: /process-improvement/
-
-  - title: "Financial Market"
-    url: /financial-market/
-  - title: "Contact"
-    url: /contact/
+      - title: "Financial Market"
+        url: /financial-market/
+      - title: "Contact"
+        url: /contact/

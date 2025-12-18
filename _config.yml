@@ -8,6 +8,7 @@ repository: "upp275/upp275.github.io"
 
 # Theme (using local files)
 minimal_mistakes_skin: "dark"
+search: false
 
 # Additional skins for dynamic switching
 skins:
@@ -76,8 +77,7 @@ plugins:
   - jekyll-include-cache
 
 # Custom JavaScript
-footer_scripts:
-  - "/assets/js/toggle-menu.js"
+# footer_scripts:
 
 
 
