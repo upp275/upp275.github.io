@@ -139,12 +139,14 @@ body {
   padding-top: 120px !important;
   background-color: #0a192f !important;
   background-image: linear-gradient(rgba(10, 25, 47, 0.78), rgba(10, 25, 47, 0.78)), url('/assets/images/website_background_globe_optimized.gif') !important;
-  background-size: 100%100% !important;
+  background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
   min-height: 100vh !important;
+  overflow-x: hidden !important;
 }
+
 
 
 
@@ -234,10 +236,8 @@ body {
   padding: 0 10px !important;
 }
 
-/* Remove scrollbars */
-body {
-  overflow-x: auto;
-}
+/* Horizontal overflow handled in body */
+
 
 .sidebar {
   overflow-x: auto;
@@ -258,82 +258,78 @@ body {
   top: 0;
 }
 
-/* Full width layout */
-.page {
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.page__inner-wrap {
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 20px !important;
-}
-
+/* Professional Fluid Layout System */
 #main {
-  max-width: none !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.initial-content,
+.page,
+.page__inner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.initial-content {
-  max-width: none !important;
+.page__content {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure the grid/feature wrapper uses full width */
+.feature__wrapper {
+  width: 100% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 20px !important;
+}
+
+.feature__item {
+  flex: 1 1 300px !important;
+  /* Flexible items with a minimum width */
+  max-width: 400px !important;
   margin: 0 !important;
 }
 
-/* Mobile layout */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   #main {
-    margin: 0 !important;
-    padding: 10px !important;
-    width: 100% !important;
-  }
-
-  .page__inner-wrap {
-    padding: 0 5px !important;
-    margin: 0 !important;
-  }
-
-  .page__content {
-    font-size: 0.9em !important;
-    line-height: 1.5 !important;
-  }
-
-  .feature__wrapper {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 1em !important;
+    padding: 15px !important;
   }
 
   .feature__item {
-    margin-bottom: 1em !important;
-  }
-}
-
-/* Full width layout without sidebar */
-@media (min-width: 64em) {
-  #main {
-    margin-left: 0 !important;
-    padding: 20px !important;
-    width: 100% !important;
+    flex: 1 1 100% !important;
+    /* Full width on mobile */
+    max-width: 100% !important;
   }
 
   .page__content {
-    max-width: none !important;
-    margin: 0 !important;
-    text-align: left !important;
-  }
-
-  .page__inner-wrap {
-    padding: 0 20px !important;
-    margin: 0 !important;
-  }
-
-  .toggle-btn {
-    display: none;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
   }
 }
+
+
+/* Redundant mobile styles removed as they are covered by the new fluid system */
+
+
+/* Cleaned up desktop overrides */
+@media (min-width: 64em) {
+  .page__content {
+    text-align: left !important;
+  }
+}
+
 
 /* Transparent Footer */
 .page__footer {
