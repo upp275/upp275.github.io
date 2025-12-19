@@ -1,8 +1,4 @@
---- 
-# Only the main Sass file needs front matter (the dashes are enough) search: false 
---- 
-
-@import "minimal-mistakes/skins/dark";
+--- # Only the main Sass file needs front matter (the dashes are enough) search: false --- @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 
 /* Hide original masthead elements */
@@ -135,6 +131,16 @@
 }
 
 /* Adjust body for fixed header */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  /* Fix the 500px overflow */
+  overflow-x: hidden !important;
+}
+
 body {
   padding-top: 120px !important;
   background-color: #0a192f !important;
@@ -144,8 +150,8 @@ body {
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
   min-height: 100vh !important;
-  overflow-x: hidden !important;
 }
+
 
 
 
@@ -258,66 +264,67 @@ body {
   top: 0;
 }
 
-/* Professional Fluid Layout System */
+/* Professional Fluid Layout System - Complete Reset */
 #main {
+  display: block !important;
+  width: 100% !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
   padding: 20px !important;
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
+  float: none !important;
+  /* Kill theme floats */
+  clear: both !important;
 }
 
 .initial-content,
 .page,
-.page__inner-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
+.page__inner-wrap,
 .page__content {
+  display: block !important;
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  float: none !important;
 }
 
-/* Ensure the grid/feature wrapper uses full width */
+/* Modern Responsive Grid */
 .feature__wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 30px !important;
   width: 100% !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 20px !important;
+  margin: 20px 0 !important;
+  padding: 0 !important;
 }
 
 .feature__item {
-  flex: 1 1 300px !important;
-  /* Flexible items with a minimum width */
-  max-width: 400px !important;
   margin: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   #main {
-    padding: 15px !important;
+    padding: 10px !important;
   }
 
-  .feature__item {
-    flex: 1 1 100% !important;
-    /* Full width on mobile */
-    max-width: 100% !important;
+  .feature__wrapper {
+    grid-template-columns: 1fr !important;
+    /* Force stack on mobile */
+    gap: 20px !important;
   }
 
   .page__content {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     line-height: 1.6 !important;
+    text-align: left !important;
   }
 }
+
 
 
 /* Redundant mobile styles removed as they are covered by the new fluid system */
