@@ -1,7 +1,6 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
-search: false
----
+--- 
+# Only the main Sass file needs front matter (the dashes are enough) search: false 
+--- 
 
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
@@ -139,24 +138,15 @@ search: false
 body {
   padding-top: 120px !important;
   background-color: #0a192f !important;
-  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80') !important;
-  background-size: cover !important;
+  background-image: linear-gradient(rgba(10, 25, 47, 0.78), rgba(10, 25, 47, 0.78)), url('/assets/images/website_background_globe_optimized.gif') !important;
+  background-size: 100%100% !important;
   background-position: center !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
   min-height: 100vh !important;
 }
 
-body::before {
-  content: '' !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  background: rgba(10, 25, 47, 0.7) !important;
-  z-index: -1 !important;
-}
+
 
 #main {
   padding-top: 20px !important;
@@ -343,4 +333,23 @@ body {
   .toggle-btn {
     display: none;
   }
+}
+
+/* Transparent Footer */
+.page__footer {
+  background-color: transparent !important;
+  color: #fff !important;
+  /* Ensure text is visible */
+  margin-top: 2rem !important;
+  /* Add some spacing if needed */
+}
+
+.page__footer footer {
+  background-color: transparent !important;
+}
+
+.page__footer-follow,
+.page__footer-copyright {
+  color: #bdc3c7 !important;
+  /* Lighter text for footer links */
 }
