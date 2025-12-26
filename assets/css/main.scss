@@ -21,7 +21,7 @@
 /* Custom header design */
 .masthead {
   display: block !important;
-  background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+  background: linear-gradient(180deg, rgb(0, 4, 40), rgb(0, 78, 146)) !important;
   padding: 0 !important;
   position: fixed !important;
   top: 0 !important;
@@ -29,6 +29,8 @@
   right: 0 !important;
   z-index: 1000 !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .custom-header {
@@ -47,10 +49,10 @@
 }
 
 .header-avatar {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  border: 3px solid #3498db;
+  width: 100px;
+  height: 100px;
+  border-radius: 13%;
+  border: 1px solid #10d03d00;
   object-fit: cover;
 }
 
@@ -148,8 +150,9 @@ body {
 body {
   padding-top: 120px !important;
   background-color: #0a192f !important;
-  background-image: linear-gradient(rgba(10, 25, 47, 0.78), rgba(10, 25, 47, 0.78)), url('/assets/images/website_background_globe_optimized.gif') !important;
-  background-size: cover !important;
+  background-image: linear-gradient((rgba(0, 4, 40, 0.65)), rgba(0, 78, 146, 0.5)), url('/assets/images/website_background_globe_optimized.gif') !important;
+  /*background-size: cover !important; */
+  background-size: 101% 101% !important;
   background-position: center !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;

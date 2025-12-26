@@ -20,7 +20,8 @@ For business inquiries, collaboration opportunities, or to request my email addr
 
 📍 **Current Location**: Ahmedabad, Gujarat, India  
 🌏 **Previous Experience**: Sydney, Perth Australia  
-✈️ **Travel**: Available for travel opportunities
+✈️ **Travel**: Can Travel Globally  
+**Available for Remote Work Arrangements Globally**
 
 ### Areas of Expertise
 

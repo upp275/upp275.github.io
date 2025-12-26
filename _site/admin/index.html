@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Editor</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f8f9fa; }
+    .header { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+    .editor-panel { background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .form-group { margin-bottom: 1.5rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #2c3e50; }
+    input, textarea, select { width: 100%; padding: 0.75rem; border: 2px solid #e9ecef; border-radius: 4px; font-size: 1rem; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #3498db; }
+    .feature-item { background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 1rem; margin: 1rem 0; cursor: move; }
+    .feature-item:hover { border-color: #3498db; background: #e3f2fd; }
+    .feature-item.dragging { opacity: 0.5; }
+    .btn { background: #3498db; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 1rem; margin: 0.5rem; }
+    .btn:hover { background: #2980b9; }
+    .btn-success { background: #27ae60; }
+    .btn-success:hover { background: #229954; }
+    .btn-danger { background: #e74c3c; }
+    .btn-danger:hover { background: #c0392b; }
+    .preview { background: #2c3e50; color: white; padding: 2rem; border-radius: 8px; margin-top: 2rem; }
+    .preview h2 { margin-top: 0; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .feature-card { background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 4px; }
+    .token-input { background: #fff3cd; border-color: #ffeaa7; }
+    .success-msg { background: #d4edda; color: #155724; padding: 1rem; border-radius: 4px; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎨 Portfolio Drag & Drop Editor</h1>
+    <p>Edit your GitHub Pages portfolio visually</p>
+  </div>
+
+  <div class="container">
+    <div class="editor-panel">
+      <h3>🔑 GitHub Authentication</h3>
+      <div class="form-group">
+        <label>GitHub Personal Access Token:</label>
+        <input type="password" id="github-token" class="token-input" placeholder="ghp_xxxxxxxxxxxx">
+        <small>Create at: <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Settings → Tokens</a> (Select 'repo' scope)</small>
+      </div>
+    </div>
+
+    <div class="editor-panel">
+      <h3>📝 Home Page Content</h3>
+      <div class="form-group">
+        <label>Main Title:</label>
+        <input type="text" id="title" value="Utkarsh Pandya">
+      </div>
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea id="description" rows="3">Data Analytics | Business Analyst | Project Manager | Supply Chain & Process Improvement Specialist</textarea>
+      </div>
+      <div class="form-group">
+        <label>Intro Text:</label>
+        <textarea id="intro" rows="2">Transforming data into actionable insights and optimizing business processes for enhanced performance and strategic decision-making.</textarea>
+      </div>
+    </div>
+
+    <div class="editor-panel">
+      <h3>🎯 Feature Sections (Drag to Reorder)</h3>
+      <div id="features-container">
+        <div class="feature-item" draggable="true">
+          <label>Title:</label>
+          <input type="text" value="📊 Data Analytics" class="feature-title">
+          <label>Description:</label>
+          <textarea class="feature-desc" rows="2">Advanced analytics, visualization, and insights generation using modern tools and methodologies.</textarea>
+          <button class="btn btn-danger" onclick="removeFeature(this)">Remove</button>
+        </div>
+        <div class="feature-item" draggable="true">
+          <label>Title:</label>
+          <input type="text" value="🎯 Project Management" class="feature-title">
+          <label>Description:</label>
+          <textarea class="feature-desc" rows="2">Strategic project leadership with focus on delivery, stakeholder management, and process optimization.</textarea>
+          <button class="btn btn-danger" onclick="removeFeature(this)">Remove</button>
+        </div>
+        <div class="feature-item" draggable="true">
+          <label>Title:</label>
+          <input type="text" value="⚡ Process Improvement" class="feature-title">
+          <label>Description:</label>
+          <textarea class="feature-desc" rows="2">Supply chain optimization and business process enhancement for operational excellence.</textarea>
+          <button class="btn btn-danger" onclick="removeFeature(this)">Remove</button>
+        </div>
+      </div>
+      <button class="btn" onclick="addFeature()">+ Add New Section</button>
+    </div>
+
+    <div class="editor-panel">
+      <h3>🎨 Theme Settings</h3>
+      <div class="form-group">
+        <label>Theme:</label>
+        <select id="theme">
+          <option value="dark">Dark Theme</option>
+          <option value="air">Light Theme</option>
+          <option value="contrast">High Contrast</option>
+          <option value="neon">Neon Theme</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="preview">
+      <h3>👀 Live Preview</h3>
+      <div id="preview-content"></div>
+    </div>
+
+    <div class="editor-panel">
+      <button class="btn btn-success" onclick="saveToGitHub()">💾 Save to GitHub</button>
+      <button class="btn" onclick="updatePreview()">🔄 Update Preview</button>
+      <div id="save-status"></div>
+    </div>
+  </div>
+
+  <script>
+    let draggedElement = null;
+
+    function updatePreview() {
+      const title = document.getElementById('title').value;
+      const desc = document.getElementById('description').value;
+      const intro = document.getElementById('intro').value;
+      const features = Array.from(document.querySelectorAll('.feature-item')).map(item => ({
+        title: item.querySelector('.feature-title').value,
+        desc: item.querySelector('.feature-desc').value
+      }));
+
+      document.getElementById('preview-content').innerHTML = `
+        <h2>${title}</h2>
+        <p><em>${desc}</em></p>
+        <p>${intro}</p>
+        <div class="feature-grid">
+          ${features.map(f => `<div class="feature-card"><strong>${f.title}</strong><br>${f.desc}</div>`).join('')}
+        </div>
+      `;
+    }
+
+    function addFeature() {
+      const container = document.getElementById('features-container');
+      const newFeature = document.createElement('div');
+      newFeature.className = 'feature-item';
+      newFeature.draggable = true;
+      newFeature.innerHTML = `
+        <label>Title:</label>
+        <input type="text" value="🆕 New Section" class="feature-title">
+        <label>Description:</label>
+        <textarea class="feature-desc" rows="2">Enter description here...</textarea>
+        <button class="btn btn-danger" onclick="removeFeature(this)">Remove</button>
+      `;
+      setupDragAndDrop(newFeature);
+      container.appendChild(newFeature);
+    }
+
+    function removeFeature(btn) {
+      btn.parentElement.remove();
+    }
+
+    function setupDragAndDrop(element) {
+      element.addEventListener('dragstart', function(e) {
+        draggedElement = this;
+        this.classList.add('dragging');
+      });
+
+      element.addEventListener('dragend', function(e) {
+        this.classList.remove('dragging');
+        draggedElement = null;
+      });
+
+      element.addEventListener('dragover', function(e) {
+        e.preventDefault();
+      });
+
+      element.addEventListener('drop', function(e) {
+        e.preventDefault();
+        if (draggedElement && draggedElement !== this) {
+          const container = document.getElementById('features-container');
+          const allItems = Array.from(container.children);
+          const draggedIndex = allItems.indexOf(draggedElement);
+          const targetIndex = allItems.indexOf(this);
+          
+          if (draggedIndex < targetIndex) {
+            container.insertBefore(draggedElement, this.nextSibling);
+          } else {
+            container.insertBefore(draggedElement, this);
+          }
+        }
+      });
+    }
+
+    async function saveToGitHub() {
+      const token = document.getElementById('github-token').value;
+      if (!token) {
+        alert('Please enter your GitHub token first!');
+        return;
+      }
+
+      const title = document.getElementById('title').value;
+      const desc = document.getElementById('description').value;
+      const intro = document.getElementById('intro').value;
+      const theme = document.getElementById('theme').value;
+      const features = Array.from(document.querySelectorAll('.feature-item')).map(item => ({
+        title: item.querySelector('.feature-title').value,
+        excerpt: item.querySelector('.feature-desc').value,
+        url: '/' + item.querySelector('.feature-title').value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '/',
+        btn_label: 'Learn More',
+        btn_class: 'btn--primary'
+      }));
+
+      const indexContent = `---
+layout: single
+author_profile: false
+excerpt: "${desc}"
+intro: 
+  - excerpt: '${intro}'
+feature_row:
+${features.map(f => `  - title: "${f.title}"
+    excerpt: "${f.excerpt}"
+    url: "${f.url}"
+    btn_label: "${f.btn_label}"
+    btn_class: "${f.btn_class}"`).join('
+')}
+---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}`;
+
+      const configContent = await fetch('https://api.github.com/repos/upp275/upp275.github.io/contents/_config.yml', {
+        headers: { 'Authorization': `token ${token}` }
+      }).then(r => r.json());
+
+      const configYml = atob(configContent.content).replace(/minimal_mistakes_skin: ".*"/, `minimal_mistakes_skin: "${theme}"`);
+
+      try {
+        // Update index.html
+        const indexFile = await fetch('https://api.github.com/repos/upp275/upp275.github.io/contents/index.html', {
+          headers: { 'Authorization': `token ${token}` }
+        }).then(r => r.json());
+
+        await fetch('https://api.github.com/repos/upp275/upp275.github.io/contents/index.html', {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: 'Update homepage via visual editor',
+            content: btoa(indexContent),
+            sha: indexFile.sha
+          })
+        });
+
+        // Update _config.yml
+        await fetch('https://api.github.com/repos/upp275/upp275.github.io/contents/_config.yml', {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: 'Update theme via visual editor',
+            content: btoa(configYml),
+            sha: configContent.sha
+          })
+        });
+
+        document.getElementById('save-status').innerHTML = '<div class="success-msg">✅ Successfully saved to GitHub! Your site will update in 1-2 minutes.</div>';
+      } catch (error) {
+        document.getElementById('save-status').innerHTML = `<div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 4px;">❌ Error: ${error.message}</div>`;
+      }
+    }
+
+    // Initialize
+    document.querySelectorAll('.feature-item').forEach(setupDragAndDrop);
+    updatePreview();
+    
+    // Auto-update preview
+    document.addEventListener('input', updatePreview);
+  </script>
+</body>
+</html>

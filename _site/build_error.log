@@ -1,0 +1,59 @@
+Configuration file: C:/Users/Utkarsh/Documents/INVESTMENTS/Github_Portfolio/_config.yml
+C:/tools/ruby34/lib/ruby/3.4.0/win32/registry.rb:2: warning: fiddle/import is found in fiddle, which will no longer be part of the default gems starting from Ruby 3.5.0.
+You can add fiddle to your Gemfile or gemspec to silence this warning.
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: C:/Users/Utkarsh/Documents/INVESTMENTS/Github_Portfolio
+       Destination: C:/Users/Utkarsh/Documents/INVESTMENTS/Github_Portfolio/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+  Liquid Exception: Liquid syntax error (C:/Users/Utkarsh/Documents/INVESTMENTS/Github_Portfolio/_includes/head.html line 18): Tag '{% - endif %}' was not properly terminated with regexp: /\%\}/ included in /_layouts/default.html
+C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:132:in 'Liquid::BlockBody#raise_missing_tag_terminator': Liquid syntax error (C:/Users/Utkarsh/Documents/INVESTMENTS/Github_Portfolio/_includes/head.html line 18): Tag '{% - endif %}' was not properly terminated with regexp: /\%\}/ included  (Liquid::SyntaxError)
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:24:in 'Liquid::BlockBody#parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block.rb:58:in 'Liquid::Block#parse_body'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/if.rb:30:in 'Liquid::If#parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tag.rb:10:in 'Liquid::Tag.parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:34:in 'Liquid::BlockBody#parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/document.rb:10:in 'Liquid::Document#parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/document.rb:5:in 'Liquid::Document.parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:130:in 'Liquid::Template#parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:114:in 'Liquid::Template.parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:13:in 'block in Jekyll::LiquidRenderer::File#parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:49:in 'Jekyll::LiquidRenderer::File#measure_time'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:12:in 'Jekyll::LiquidRenderer::File#parse'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/tags/include.rb:174:in 'Jekyll::Tags::IncludeTag#load_cached_partial'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/tags/include.rb:135:in 'Jekyll::Tags::IncludeTag#render'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:91:in 'Liquid::BlockBody#render'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:206:in 'block in Liquid::Template#render'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:240:in 'Liquid::Template#with_profiling'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:205:in 'Liquid::Template#render'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:218:in 'Liquid::Template#render!'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:30:in 'block (2 levels) in Jekyll::LiquidRenderer::File#render!'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:42:in 'Jekyll::LiquidRenderer::File#measure_bytes'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:29:in 'block in Jekyll::LiquidRenderer::File#render!'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:49:in 'Jekyll::LiquidRenderer::File#measure_time'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/liquid_renderer/file.rb:28:in 'Jekyll::LiquidRenderer::File#render!'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/renderer.rb:126:in 'Jekyll::Renderer#render_liquid'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/renderer.rb:195:in 'Jekyll::Renderer#render_layout'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/renderer.rb:158:in 'Jekyll::Renderer#place_in_layouts'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/renderer.rb:88:in 'Jekyll::Renderer#render_document'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/renderer.rb:62:in 'Jekyll::Renderer#run'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/site.rb:479:in 'Jekyll::Site#render_regenerated'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/site.rb:472:in 'block in Jekyll::Site#render_pages'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/site.rb:471:in 'Array#each'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/site.rb:471:in 'Jekyll::Site#render_pages'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/site.rb:192:in 'Jekyll::Site#render'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/site.rb:71:in 'Jekyll::Site#process'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/command.rb:28:in 'Jekyll::Command.process_site'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/commands/build.rb:65:in 'Jekyll::Commands::Build.build'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/commands/build.rb:36:in 'Jekyll::Commands::Build.process'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/lib/jekyll/commands/build.rb:18:in 'block (2 levels) in Jekyll::Commands::Build.init_with_program'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in 'block in Mercenary::Command#execute'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in 'Array#each'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in 'Mercenary::Command#execute'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/mercenary-0.3.6/lib/mercenary/program.rb:42:in 'Mercenary::Program#go'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/mercenary-0.3.6/lib/mercenary.rb:19:in 'Mercenary.program'
+	from C:/Users/Utkarsh/.local/share/gem/ruby/3.4.0/gems/jekyll-3.10.0/exe/jekyll:15:in '<top (required)>'
+	from C:/Users/Utkarsh/AppData/Local/Microsoft/WindowsApps/jekyll:25:in 'Kernel#load'
+	from C:/Users/Utkarsh/AppData/Local/Microsoft/WindowsApps/jekyll:25:in '<main>'

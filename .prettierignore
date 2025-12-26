@@ -1,0 +1,2 @@
+# Ignore Jekyll assets with Front Matter that Prettier breaks
+assets/css/main.scss
